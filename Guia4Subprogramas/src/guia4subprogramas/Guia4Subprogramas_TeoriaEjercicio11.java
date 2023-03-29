@@ -19,7 +19,7 @@ Por ejemplo, si el usuario ingresa:     Ayer, lunes, salimos a las once y 10.
 La salida del programa debería ser:  @y#r, l*n#s, s@l$m%s @ l@s %nc# y 10.
 
  */
-public class Guia4Subprogramas_Ejercicio11 {
+public class Guia4Subprogramas_TeoriaEjercicio11 {
 
     /**
      * @param args the command line arguments
