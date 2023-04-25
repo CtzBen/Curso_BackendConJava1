@@ -7,12 +7,14 @@ public class Taza {
     private String liquidoDentro;
 
     public Taza() {
+        this.cantidadActual = 0.0;
+        this.liquidoDentro = null;
     }
 
-    public Taza(double capacidadMax, double cantidadActual, String liquidoDentro) {
+    public Taza(double capacidadMax) {
         this.capacidadMax = capacidadMax;
-        this.cantidadActual = cantidadActual;
-        this.liquidoDentro = liquidoDentro;
+        this.cantidadActual = 0.0;
+        this.liquidoDentro = null;
     }
 
     public double getCapacidadMax() {
