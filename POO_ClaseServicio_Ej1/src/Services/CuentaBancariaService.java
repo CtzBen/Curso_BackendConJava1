@@ -49,7 +49,7 @@ public class CuentaBancariaService {
     }
     public void extraccionRapida(CuentaBancaria cuenta, double retiro){
         
-       double porcentajeMaximo = (cuenta.getSaldoActual()*20)/100;
+       double porcentajeMaximo = (20*100)/cuenta.getSaldoActual();
        if (retiro <= porcentajeMaximo) {
             cuenta.setSaldoActual(cuenta.getSaldoActual() - retiro);
             System.out.println("Retiro realizado correctamente.");
