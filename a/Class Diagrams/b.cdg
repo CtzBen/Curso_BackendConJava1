@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="b">
+  <ClassDiagramComponents>
+    <Class name="pipiapri" package="" visibility="public" xPosition="308.0" yPosition="37.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="asdf" package="" visibility="public" xPosition="529.0" yPosition="93.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="ad" source="pipiapri" target="asdf" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
