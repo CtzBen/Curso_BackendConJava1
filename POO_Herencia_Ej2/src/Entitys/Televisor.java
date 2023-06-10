@@ -38,6 +38,11 @@ public class Televisor extends Electrodomestico{
     public void setSintonizadorTDT(boolean sintonizadorTDT) {
         this.sintonizadorTDT = sintonizadorTDT;
     }
+
+    @Override
+    public String toString() {
+        return "Televisor{" + "resolucion=" + resolucion + ", sintonizadorTDT=" + sintonizadorTDT + '}';
+    }
     
     
 }
