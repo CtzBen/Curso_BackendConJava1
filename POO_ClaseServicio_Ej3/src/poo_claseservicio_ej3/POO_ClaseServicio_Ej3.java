@@ -54,6 +54,16 @@ public class POO_ClaseServicio_Ej3 {
         System.out.println("El "+calcularPorcentaje(mayores,n)+"% de las personas son mayores de edad.");
         System.out.println("El "+calcularPorcentaje(menores,n)+"% de las personas son menores de edad.");
         
+        //prueba de excepción simple
+
+          Persona personanull = null;
+          try {
+              personaService.esMayorDeEdad(personanull);
+              
+           } catch (NullPointerException e) {
+//               e.printStackTrace();
+               System.out.println(e.getMessage());
+           }
     }
     
     public static double calcularPorcentaje(int cuantoDelTotal, int total){
