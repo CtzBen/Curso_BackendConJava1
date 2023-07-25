@@ -37,8 +37,9 @@ public class AutorService {
         
         List<Autor> autores = 
         em.createQuery("SELECT a FROM Autor a WHERE a.nombre LIKE :nombre").setParameter("nombre", nombre).getResultList();
-        
+
         return autores;
+        
     }
     
     public void persistirAutor(Autor autor){

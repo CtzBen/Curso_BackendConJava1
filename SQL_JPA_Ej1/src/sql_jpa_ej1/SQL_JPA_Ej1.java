@@ -23,7 +23,7 @@ public class SQL_JPA_Ej1 {
         EditorialService editorialService = new EditorialService();
         AutorService autorService = new AutorService();
         
-//        
+        
 //        Autor autor = autorService.crearAutor();
 //        autorService.persistirAutor(autor);
 //        
@@ -39,7 +39,11 @@ public class SQL_JPA_Ej1 {
             System.out.println(libros.toString());
         }
         
-        
+        System.out.println(autorService.buscarAutorPorNombre("Fer Chiquito").get(0).toString());
+        System.out.println(libroService.buscarLibroPorISBN("ABC333").get(0).toString());
+        System.out.println(libroService.buscarLibroPorTitulo("Mi experiencia en las citas peludas").get(0).toString());
+        System.out.println(libroService.buscarLibroPorAutor("Fer Chiquito").get(0).toString());
+        System.out.println(libroService.buscarLibroPorEditorial("CopilotSA").get(0).toString());
     }
     
 }

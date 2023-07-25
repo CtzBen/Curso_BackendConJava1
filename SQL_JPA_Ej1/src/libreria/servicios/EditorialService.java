@@ -25,10 +25,10 @@ public class EditorialService {
       
     public void persistirEditorial(Editorial editorial){
         
-                
+        
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("libreriaPU");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        
+
         // Iniciar una transacción
         entityManager.getTransaction().begin();
         // Persiste el Editorial
@@ -94,5 +94,7 @@ public class EditorialService {
         entityManager.close();
         entityManagerFactory.close();
         
+        
     }
+    
 }

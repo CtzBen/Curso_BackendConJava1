@@ -53,6 +53,45 @@ public class LibroService {
     
     }
 
+     public List<Libro> buscarLibroPorISBN(String isbn){
+        
+        EntityManager em = Persistence.createEntityManagerFactory("libreriaPU").createEntityManager();
+        
+        List<Libro> libros = 
+        em.createQuery("SELECT l FROM Libro l WHERE l.isbn LIKE :isbn").setParameter("isbn", isbn).getResultList();
+        
+        return libros;
+    }
+    
+     public List<Libro> buscarLibroPorTitulo(String titulo){
+        
+        EntityManager em = Persistence.createEntityManagerFactory("libreriaPU").createEntityManager();
+        
+        List<Libro> libros = 
+        em.createQuery("SELECT l FROM Libro l WHERE l.titulo LIKE :titulo").setParameter("titulo", titulo).getResultList();
+        
+        return libros;
+    }
+     
+     public List<Libro> buscarLibroPorAutor(String autor){
+        
+        EntityManager em = Persistence.createEntityManagerFactory("libreriaPU").createEntityManager();
+        
+        List<Libro> libros = 
+        em.createQuery("SELECT l FROM Libro l JOIN l.autor a WHERE a.nombre LIKE :autor").setParameter("autor", autor).getResultList();
+        
+        return libros;
+    }
+     
+     public List<Libro> buscarLibroPorEditorial(String editorial){
+        
+        EntityManager em = Persistence.createEntityManagerFactory("libreriaPU").createEntityManager();
+        
+        List<Libro> libros = 
+        em.createQuery("SELECT l FROM Libro l JOIN l.editorial e WHERE e.nombre LIKE :editorial").setParameter("editorial", editorial).getResultList();
+        
+        return libros;
+    }
     
     public List<Libro> consultarLibros(){
         
